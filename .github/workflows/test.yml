@@ -25,5 +25,5 @@ jobs:
 
     - name: Run tests
       run: |
-        python tests.py
+        python TestSample.py
       shell: bash
