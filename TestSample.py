@@ -13,7 +13,9 @@ def test_condition_splitting():
     unique_values = df[condition_column].unique()
 
     for value in unique_values:
+        output_excel_file = f'{value}_sheet.xlsx'
         filtered_df = df[df[condition_column] == value]
+        filtered_df.to_excel(output_excel_file, index=False)
         assert not filtered_df.empty, f"Failed to split data for {value} in the condition column."
 
 def test_output_files_exist():
