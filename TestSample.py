@@ -39,9 +39,10 @@ def test_output_files_not_empty():
         output_df = pd.read_excel(output_excel_file)
         assert not output_df.empty, f"Output file {output_excel_file} is empty."
 
-# Run the tests
-test_read_data()
-test_condition_splitting()
-test_output_files_exist()
-test_output_files_not_empty()
-print("All tests passed successfully.")
+if __name__ == "__TestSample__":
+    # Run the tests
+    test_read_data()
+    test_condition_splitting()
+    test_output_files_exist()
+    test_output_files_not_empty()
+    print("All tests passed successfully.")
