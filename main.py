@@ -626,7 +626,8 @@ def read_survey_data_new(file_path: str='2024 Advisor Survey_March 27, 2024_17.5
     for row_number in range(4, sheet.max_row + 1):
         # If the data is part of a preview, skip it
         distribution = sheet.cell(row=row_number, column=16).value
-        if distribution == 'preview': continue
+        email = sheet.cell(row=row_number, column=12).value
+        if distribution == 'preview' or email == 'Advisement.Student@wallawalla.edu': continue
 
         advisor_name =  sheet.cell(row=row_number, column=46).value
         first_name = sheet.cell(row=row_number, column=47).value
@@ -636,7 +637,7 @@ def read_survey_data_new(file_path: str='2024 Advisor Survey_March 27, 2024_17.5
             # Create a survey report dictionary
             survey_report = {
                 'name': sheet.cell(row=row_number, column=52).value,
-                'email': sheet.cell(row=row_number, column=12).value,
+                'email': email,
                 'Q1': convert_other_response(sheet.cell(row=row_number, column=18).value),
                 'Q2': convert_other_response(sheet.cell(row=row_number, column=19).value),
                 'Q3': convert_other_response(sheet.cell(row=row_number, column=20).value),

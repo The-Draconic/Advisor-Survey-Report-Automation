@@ -14,9 +14,12 @@ When you get the code, make sure to-in order to see all the files-you open the f
 
 ### Running the Code
 When you have VSCode open and you see the code and files, follow these instructions:
-1. Make sure that, besides the code files, you have the **3 Year Combined Averages** file and the Qualtrics file in the folder on the same level as main.py. If you got the code from GitHub, you'll need to make sure you do that.
+1. Make sure that, besides the code files, you have the **3 Year Combined Averages** file (from the past year) and the Qualtrics file in the folder on the same level as main.py. If you got the code from GitHub, you'll need to make sure you do that.
 2. Right-click on the folder with all the code and select '*Open in Integrated Terminal*'.
 3. In the terminal, enter: python main.py
 4. After entering that, you'll be prompted for the new year, enter the year of the survey data. (ex. 2024)
 5. Next, you'll be prompted for what file you want to read from, copy and paste the name of the survey file, INCLUDE THE FILE EXTENSION. (ex. 2024 Advisor Survey_March 27, 2024_17.50.csv)
 6. The code will then run the rest on its own, editing the **3 Year Combined Averages** file, create the **All Adviser 3 Year Stats** file and individual files for each advisor inside the folder called **Individual Advisor Data**.
+
+## Notes for Future Programmers
+If you cloned the GitHub repository to your local repository and are planning to push updated code to GitHub, DO NOT, and I repeat, DO NOT PUSH THE CODE with the files containing sensitive data. Take those files out of the repository folder and then push it.
